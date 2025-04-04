@@ -2,3 +2,5 @@
 so_long
 *.log
 *.txt
+minilibx-linux
+.obj*/
