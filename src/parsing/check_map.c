@@ -29,18 +29,18 @@ int	check_map(t_data *ptr_data)
 	if (ret != 0)
 	{
 		ft_vector_free(&ptr_data->map);
-		return (print_error(ERROR_MAP_FORMAT));
+		exit (print_error(ret));
 	}
 	ret = check_map_content(ptr_data);
 	if (ret != 0)
-		return (print_error(ERROR_MAP_FORMAT));
+		return (print_error(ret));
 	ret = check_map_wall(ptr_data);
 	if (ret != 0)
-		return (print_error(ERROR_MAP_FORMAT));
+		return (print_error(ret));
 	get_player_position(ptr_data);
 	ret = check_map_solution(ptr_data);
 	if (ret != 0)
-		return (print_error(ERROR_MAP_FORMAT));
+		return (print_error(ret));
 	return (0);
 }
 

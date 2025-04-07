@@ -50,7 +50,7 @@ static void	open_file(int *ptr_fd, char *filename)
 	}
 }
 
-static void	my_free(t_vector *ptr_vec)
+void	my_free(t_vector *ptr_vec)
 {
 	size_t	i;
 
@@ -58,5 +58,7 @@ static void	my_free(t_vector *ptr_vec)
 	while (i < ptr_vec->size)
 	{
 		free(((char **)ptr_vec->data)[i]);
+		i++;
 	}
+	free(ptr_vec->data);
 }
