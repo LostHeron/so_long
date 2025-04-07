@@ -6,7 +6,7 @@
 /*   By: jweber <jweber@student.42Lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 19:46:05 by jweber            #+#    #+#             */
-/*   Updated: 2025/04/04 18:15:58 by jweber           ###   ########.fr       */
+/*   Updated: 2025/04/07 17:38:24 by jweber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,18 @@ typedef struct s_data
 	void		*ptr_img_ground;
 	void		*ptr_img_wall;
 	void		*ptr_img_coin;
+	void		*ptr_img_exit;
 	void		*ptr_img_player;
 }			t_data;
+
+# define SPRITE_WIDTH 64
+# define SPRITE_HEIGHT 64
 
 # define ERROR_READ -1
 # define ERROR_MALLOC -3
 # define ERROR_OPEN -6
 # define ERROR_MAP_FORMAT -7
+# define ERROR_SPRITE_FORMAT -8
+# define ERROR_MLX -9
 
 #endif 
